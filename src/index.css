@@ -1,0 +1,59 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;600;800&display=swap');
+
+@theme {
+  --font-headline: "Noto Serif", serif;
+  --font-body: "Manrope", sans-serif;
+  --font-label: "Manrope", sans-serif;
+
+  --color-primary: #e0c292;
+  --color-on-primary: #3f2d0a;
+  --color-primary-container: #b59a6d;
+  --color-on-primary-container: #44320e;
+  
+  --color-surface: #131313;
+  --color-on-surface: #e5e2e1;
+  --color-surface-container: #201f1f;
+  --color-surface-container-low: #1c1b1b;
+  --color-surface-container-high: #2a2a2a;
+  --color-surface-container-highest: #353534;
+  --color-surface-container-lowest: #0e0e0e;
+  
+  --color-secondary: #c8c6c5;
+  --color-on-secondary: #303030;
+  
+  --color-outline: #998f83;
+  --color-outline-variant: #4d463b;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-on-surface font-body selection:bg-primary/30 selection:text-primary;
+  }
+}
+
+.bg-gradient-gold {
+  background: linear-gradient(135deg, #e0c292 0%, #b59a6d 100%);
+}
+
+.logo-invert {
+  filter: invert(72%) sepia(17%) saturate(738%) hue-rotate(356deg) brightness(91%) contrast(89%);
+}
+
+/* Custom masonry-like grid for Selected Works */
+.selected-works-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .selected-works-grid {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 300px;
+  }
+}
+
+.glass-panel {
+  @apply bg-surface/70 backdrop-blur-xl border-l border-primary/20;
+}
