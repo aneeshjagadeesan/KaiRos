@@ -349,9 +349,9 @@ export default function App() {
                   <ul className="space-y-4 mb-12 text-sm font-light text-secondary/80">
                     {pkg.features.map((f, i) => <li key={i}>{f}</li>)}
                   </ul>
-                  <a 
-                    href="#contact" 
-                    className="w-full border border-outline-variant py-4 font-label text-[10px] uppercase tracking-[0.3em] hover:bg-surface-container-high transition-all"
+                  <a
+                    href="#contact"
+                    className="block w-full text-center border border-outline-variant py-4 font-label text-[10px] uppercase tracking-[0.3em] hover:bg-surface-container-high transition-all"
                   >
                     Inquire
                   </a>
@@ -365,7 +365,7 @@ export default function App() {
             {/* Pre-Wedding */}
             <motion.div {...fadeIn}>
               <div className="flex items-center gap-4 mb-10">
-                <span className="font-label text-[9px] tracking-[0.4em] uppercase text-primary">CAD $600–$900</span>
+                <span className="font-label text-[10px] tracking-[0.5em] uppercase text-primary">02</span>
                 <h3 className="font-headline text-xl uppercase tracking-[0.2em]">Pre-Wedding</h3>
               </div>
               <div className="space-y-6">
@@ -557,7 +557,7 @@ export default function App() {
                     <select 
                       id="service"
                       name="service"
-                      className="w-full bg-surface-container-lowest border-none focus:ring-1 focus:ring-primary text-on-surface p-5 text-sm appearance-none transition-all"
+                      className="w-full bg-surface-container-lowest border-none focus:ring-1 focus:ring-primary text-on-surface p-5 pr-12 text-sm appearance-none transition-all bg-no-repeat bg-[right_1.25rem_center] bg-[length:12px] bg-[url('data:image/svg+xml;utf8,<svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%2012%208%22%20fill=%22none%22%20stroke=%22%23e0c292%22%20stroke-width=%221.5%22><path%20d=%22M1%201l5%205%205-5%22/></svg>')]"
                     >
                       <option>Wedding Package</option>
                       <option>Pre-Wedding / Engagement</option>
@@ -629,7 +629,7 @@ export default function App() {
           <div className="h-[1px] w-full max-w-md bg-outline-variant/20"></div>
 
           <div className="text-secondary/30 text-[9px] font-label tracking-[0.5em] uppercase text-center">
-            © 2024 KAI ROS MEDIA. ALL RIGHTS RESERVED.
+            © {new Date().getFullYear()} KAI ROS MEDIA. ALL RIGHTS RESERVED.
           </div>
         </div>
       </footer>

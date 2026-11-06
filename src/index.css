@@ -1,5 +1,9 @@
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&family=Manrope:wght@300;400;500;600;800&display=swap');
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem; /* keep section headings clear of the fixed nav */
+}
 
 @theme {
   --font-headline: "Noto Serif", serif;
